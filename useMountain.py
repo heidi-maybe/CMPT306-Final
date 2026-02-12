@@ -45,7 +45,7 @@ class useMountain():
                 self.algorithm = algorithm
                 self.middle = self.height//2
                 self.low_left = np.argmin(self.elevation_data[:, 0])
-                # Starting state is currently the middle of the leftmost side.
+                # Starting state is currently the lowest elevation point of the leftmost side.
                 self.start = (self.low_left, 0)
                 self.low_right = np.argmin(self.elevation_data[:, -1])
 
