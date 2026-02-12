@@ -1,6 +1,7 @@
 # Mountain Paths Project
 ## Brief Description
-Final project for Westminster CMPT 306 Fall Semester 2025. The goal of this project is to use elevation data from a mountain region and find a path across that region that equates to the least amount of elevation change. 
+Final project for Westminster CMPT 306 Fall Semester 2025. The goal of this project is to use elevation data from a mountain region and find a path across that region that equates to the least amount of elevation change. This program takes a GeoTiff file and uses either the Greedy or A* algorithms to determine the path from the left side of the image to the right side. Elevation data is estracted from the GeoTiff using rasterio and that data is manipulated using numpy. The goal condition for the path is to reach the lowest elevation point on the right side of the image. The goal test condition returns true if the path that the algorithm determines reaches the right most side of the image.
+Once the path has been determined the GeoTiff is converted into a grayscale image where there the lowest elevation in the given region is black and the highest elevation is white. The color of the path is determined by the algorithm that is used, yellow is A* and red is Greedy.
 
 ## Author
 Heidi Andre
@@ -8,33 +9,15 @@ Heidi Andre
 ## Language
 Python
 
-## Compile Files
-Compile all files in both folders for best results.
-Example:
+## Files
+This repository contains useMountain.py, drawPath.py, harvard_elevation.pdf, wasatch_elevation.pdf, zirkel_elevation.pdf, and CMPT 306 Mountain Paths powerpoint file. 
 
-`cd client `
-
-`javac *.java `
-
-and 
-
-`cd server`
-
-`javac *.java`
-
-## Running Server
-`cd server`
-
-`java Server`
-
-## Running Clients
-`cd clients`
-
-`java MyGUI`
-
-Fill in the prompt boxes accordingly and press join button to connect to Server.
+### useMountain.py
+### drawPath.py
+### harvard_elevation.pdf
+### wasatch_elevation.pdf
+### zirkel_elevation.pdf
+### CMPT 306 Mountain Paths
 
 ## Known Issues and Limitations
-Clients exiting still needs to be tested to see if it is handling closing all of the connections correctly.
-
-Server response codes are still being implemented.
+Changing the targeted GeoTiff file, algorithm used, and returned file names all have to be edited manually in the code.
