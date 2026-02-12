@@ -13,11 +13,15 @@ Python
 This repository contains useMountain.py, drawPath.py, harvard_elevation.pdf, wasatch_elevation.pdf, zirkel_elevation.pdf, and CMPT 306 Mountain Paths powerpoint file. 
 
 ### useMountain.py
+useMountain.py handles the estraction of the elevation data using rasterio and finds the path based on the designated algorithm. Starting row on the leftmost side of the image is determined by `self.start` in the `__init__` method for useMountain class. This file also handles the conversion to a grayscale image and if `show_plot = True` a grayscale image with a legend is also produced. 255 pixel value is white meaning the highest elevation in the given region. A pixel value of 0 is black meaning the lowest elevation in the given region. 
+
 ### drawPath.py
+drawPath.py handles the actual drawing of the path that useMoutain.py found. Using PIL the grayscale image and pixel path that useMountain.py produced the program follows the path changing the color of the pixels to the one that corresponds with the algorithm that was used.
 ### harvard_elevation.pdf
 ### wasatch_elevation.pdf
 ### zirkel_elevation.pdf
 ### CMPT 306 Mountain Paths
+This is the powerpoint presentation that I put together to present to the class at the end of the semester.
 
 ## Known Issues and Limitations
-Changing the targeted GeoTiff file, algorithm used, and returned file names all have to be edited manually in the code.
+Changing the targeted GeoTiff file, algorithm used, starting point on the left side, and returned file names all have to be edited manually in the code.
